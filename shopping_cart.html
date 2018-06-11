@@ -1,0 +1,136 @@
+<html>
+<head>
+ <title>Shopping Cart</title>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/ttw-notification-menu.min.js"></script>
+<script src="js/jquery-ui-1.8.14.custom.min.js"></script>
+<script src="js/ttw-notification-menu.js"></script>
+<link rel="stylesheet" type="text/css" href="css/MyStyle.css">
+<link rel="stylesheet" type="text/css" href="css/style_light.css">
+<script src="./js/MyScript.js"></script>
+</head>
+<body>
+<header>
+<div class="header">
+<select class="selectCountry" style="margin-left:50px;">
+<option>united kinkdom</option>
+<option>turkey</option>
+</select>
+<button class="selectCountry" style="margin-left:600px;">sign in</button>
+<button class="selectCountry" style="margin-left:10px;">wishlist</button>
+</div>
+<div>
+<div class="header2">
+<span style="margin-left:100px; font-size : 20pt;">NEXLINE</span>
+<a href="" class="headerLink">New In</a>
+<a href="" class="headerLink">Men</a>
+<a href="" class="headerLink">Women</a>
+<a href="" class="headerLink">Kids</a>
+<a href="" class="headerLink">Beauty</a>
+<a href="" class="headerLink">Sale</a>
+<input type="text" class="search" placeholder="Search..">
+</div>
+<div style="overflow: hidden; padding : 30px; padding-left:5px;">
+<span id="cart" class="notification-menu-item"> <a style="font-size:15pt;">Cart</a></span>
+</div>
+</div>
+<div class="firstPart">free next day delivery</div>
+<div class="secondPart">sale now up to 50%</div>
+<div class="thirdPart">free returns to store</div>
+</header>
+ <div class="main">
+      <h2>Shopping Cart</h2>
+	 <table>
+	 <col width="220">
+     <col width="80">
+	 <col width="80">
+	 <col width="80">
+	  <tr>
+	     <th>Product details</th>
+		 <th>Quantity</th>
+		 <th>Price</th>
+		 <th>Total</th>
+	  </tr>
+	  <tr id="prod1">
+		 <td>
+		 <p><img src="images/noteFan.jpg" width="80" height="80">
+           <br>			 
+		   <span>Note Fan Edtion</span><br>
+		   <span><label>Color</label> : blue </span> <br>
+		   <span><label>size</label> : 153.5 x 73.9 x 7.9 mm </span>
+		   <span><label>Product code </label>: 458792 </span>
+		   </p>
+		 </td>
+		 <td align="center">
+		 <input type="number" id="qt0" value="1" min="0" onchange="update(0)" style="width:30px;"><br>
+		 <a id="remove1" href="">remove</a> 
+		 </td>
+		 <td align="center"><span class="price" id="price0">2400</span></td>
+		 <td align="center" id="total0"></td>
+		 </tr>
+		 <tr id="prod2">
+		 <td>
+		 <p><img src="images/hugo.jpg" width="80" height="80">
+           <br>	   		 
+		   <span>Hugo Watch</span><br>
+		   <span><label>Color</label> : black </span> <br>
+		   <span><label>size</label>: Normal </span> <br>
+		   <span><label>Product code </label>: 358974 </span>
+		   </p>
+		 </td>
+		 <td align="center">
+		 <input type="number" id="qt1" value="1" min="0" onchange="update(1)" style="width:30px;"><br>
+		 <a id="remove2" href="">remove</a> 
+		 </td>
+		 <td align="center"><span class="price" id="price1">1000</span></td>
+		 <td align="center" id="total1"></td>
+		 </tr>
+		 <tr id="prod3">
+		 <td>
+		 <p><img src="images/shirt.jpg" width="80" height="80">
+           <br>		 
+		   <span>LC Shirt</span><br>
+		   <span><label>Color</label> : striped </span> <br>
+		   <span><label>size</label> : XL </span> <br>
+		   <span><label>Product code </label> : 453687 </span>
+		   </p>
+		 </td>
+		 <td align="center">
+		 <input type="number" id="qt2" value="1" min="0" onchange="update(2)" style="width:30px;"><br>
+		 <a id="remove3" href="">remove</a> 
+		 </td>
+		 <td align="center"><span class="price" id="price2">200</span></td>
+		 <td align="center" id="total2"></td>
+		 </tr>
+	 </table>
+ </div>
+ <div class="checkout">
+ <h5>ORDER SUMMERY</h5>
+ <div class="part1">
+ ITEMS <span id="items" style="font-size:10pt;"></span> <span id="sum" style="margin-left:70px">dfd</span>TL
+ <br><br><span>SHIPPING</span><br><br>
+ <select id="shipping" style="margin-bottom:15px;" onchange="changeFinal()">
+  <option>Standard Delivery 10 TL </option>
+  <option>Aras Kargo 8TL</option>
+  <option></option>
+ </select>
+ </div>
+ <div class="part2">  
+ <div style="margin-top : 10px;">
+ <span>TOTAL COST</span><span id="final" style="margin-left:80px"></span>TL
+ <input type="submit" class="button" value="Checkout">
+ </div>
+ <div style="margin-top : 10px;">
+ <span>PROMOTIONAL CODE</span><a id="add" style="margin-left:50px"><b>+</b></a>
+ <input type="text" id="code" style="display:none;">
+ </div>
+ </div>
+ 
+ <footer>
+ <div class="footer">
+  <span style="font-size:10pt; margin-left:200px; margin-top:40px;">Sign up to our Newsletter and you'll get  
+  weekly offers sent to your email.</span> 
+<input type="text" class="Email" placeholder="Your Email Address"><input type="submit" class="submit">  
+ </div>
+ </footer>
+ </body>
